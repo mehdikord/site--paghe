@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-gold: #d4af37;
+  --color-gold-light: #f4e5b2;
+  --color-gold-dark: #9c7a1f;
+  --color-ink: #0a0a0a;
+  --color-ink-soft: #121212;
+  --color-ink-card: #171717;
+  --font-sans: var(--font-vazir);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-ink);
+  color: #f2ede1;
+  font-family: var(--font-vazir), Tahoma, sans-serif;
+}
+
+::selection {
+  background: var(--color-gold);
+  color: #0a0a0a;
+}
+
+.gold-text {
+  background: linear-gradient(90deg, #f4e5b2 0%, #d4af37 45%, #a9811f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gold-border {
+  border: 1px solid rgba(212, 175, 55, 0.35);
+}
+
+.card-glass {
+  background: linear-gradient(160deg, rgba(255,255,255,0.05), rgba(255,255,255,0.015));
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  backdrop-filter: blur(6px);
+}
+
+.btn-gold {
+  background: linear-gradient(90deg, #f4e5b2, #d4af37 55%, #b9922a);
+  color: #14100a;
+  font-weight: 700;
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  box-shadow: 0 8px 24px -8px rgba(212,175,55,0.55);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.06);
+  box-shadow: 0 14px 30px -10px rgba(212,175,55,0.7);
+}
+
+.btn-outline {
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  color: #f4e5b2;
+  transition: background .25s ease, transform .25s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(212, 175, 55, 0.1);
+  transform: translateY(-2px);
+}
+
+.fade-up {
+  animation: fadeUp .7s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pattern-dots {
+  background-image: radial-gradient(rgba(212,175,55,0.35) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
